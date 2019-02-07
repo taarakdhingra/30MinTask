@@ -1,28 +1,158 @@
 <html>
 <head>
-	</head>
-	<title>TIC TAC
-		<script type="text/javascript" src="tictatoe.js"></script>
+
+	<title>TIC TAC TOE
 	</title>
-	</html>
-	<body>
-	</body>
-	<div>
-<input type="button" placeholder="SUBMIT" value="1" onclick="forclick()" id="click">
-<input type="button" placeholder="SUBMIT" value="2" onclick="forclick()" id="click">
-<input type="button" placeholder="SUBMIT" value="3" onclick="forclick()" id="click">
-</div>
+	<link href="tic.css" rel="stylesheet">
 
-<div>
-<input type="button" placeholder="SUBMIT" value="4" onclick="forclick()" id="click">
-<input type="button" placeholder="SUBMIT" value="5" onclick="forclick()" id="click">
-<input type="button" placeholder="SUBMIT" value="6" onclick="forclick()" id="click">
-</div>
+	
+	<script>
+		
 
-<div>
-<input type="button" placeholder="SUBMIT" value="7" onclick="forclick()" id="click">
-<input type="button" placeholder="SUBMIT" value="8" onclick="forclick()" id="click">
-<input type="button" placeholder="SUBMIT" value="9" onclick="forclick()" id="click">
-</div>
+	var playerturn=1;
+function fetching(id )
 
+{	
+	if (playerturn<=9) {
+	if (playerturn%2==0)
+		{playerturn++;
+	document.getElementById(id).value="X";}
+	else
+		{playerturn++;
+	document.getElementById(id).value="0"}
+	}
+	
+if(document.getElementById(1).value==document.getElementById(2).value && document.getElementById(2).value==document.getElementById(3).value)
+{
+if (document.getElementById(1).value=="X") 
+	{
+	alert("HURRAH!! X WINS...");
+}
+else{
+alert("HURRAH!! O WINS")
+
+}
+	}
+
+
+		if(document.getElementById(1).value==document.getElementById(4).value && document.getElementById(4).value==document.getElementById(7).value)
+{
+if (document.getElementById(4).value=="X") 
+	{
+alert("HURRAH!! X WINS...");
+}
+else{
+alert("HURRAH!! O WINS...");
+
+}
+	}
+
+	if(document.getElementById(4).value==document.getElementById(5).value && document.getElementById(5).value==document.getElementById(6).value)
+{
+if (document.getElementById(5).value=="X") 
+	{
+	alert("HURRAH!! X WINS...");
+}
+else{
+	alert("HURRAH!! O WINS...");
+
+}
+	}
+
+if(document.getElementById(7).value==document.getElementById(8).value && document.getElementById(8).value==document.getElementById(9).value)
+{
+if (document.getElementById(9).value=="X") 
+	{
+alert("HURRAH!! X WINS...");
+}
+else{
+	alert("HURRAH!! O WINS...");
+}
+	}
+
+if(document.getElementById(2).value==document.getElementById(5).value && document.getElementById(5).value==document.getElementById(8).value)
+{
+if (document.getElementById(5).value=="X") 
+	{
+alert("HURRAH!! X WINS...");
+}
+else{
+	alert("HURRAH!! O WINS...");
+}
+}
+
+
+if(document.getElementById(3).value==document.getElementById(6).value && document.getElementById(6).value==document.getElementById(9).value)
+{
+if (document.getElementById(6).value=="X") 
+	{
+	alert("HURRAH!! X WINS...");
+}
+else{
+	alert("HURRAH!! O WINS...");
+}
+	}
+
+	if(document.getElementById(1).value==document.getElementById(5).value && document.getElementById(5).value==document.getElementById(9).value)
+{
+if (document.getElementById(5).value=="X") 
+	{
+	alert("HURRAH!! X WINS...");
+}
+else{	alert("HURRAH!! O WINS...");
+}
+	}
+
+	if(document.getElementById(3).value==document.getElementById(5).value && document.getElementById(5).value==document.getElementById(7).value)
+{
+if (document.getElementById(5).value=="X") 
+	{
+	alert("HURRAH!! X WINS...");
+}
+else{
+	alert("HURRAH!! O WINS...");
+
+}
+	}}
+
+
+
+
+
+		
+	
+		
+	</script>
+	</head>
+
+<body>
+
+		<table >
+
+			<tr>
+		<td> <input class="stylingbutton" type="button" onclick="fetching(1)" value="1" id="1" >
+		 </td>
+		<td> <input class="stylingbutton" type="button" onclick="fetching(2)" value="2" id="2" ></td>
+		
+		<td> <input class="stylingbutton" type="button" onclick="fetching(3)" value="3" id="3"></td>
+
+	</tr>
+	<tr>
+		<td> <input class="stylingbutton" type="button" onclick="fetching(4)" value="4" id="4" ></td>
+		<td> <input class="stylingbutton" type="button" onclick="fetching(5)" value="5" id="5" ></td>
+		<td> <input class="stylingbutton" type="button" onclick="fetching(6)" value="6" id="6" ></td>
+
+	</tr>
+
+	<tr>
+	<td> <input class="stylingbutton" type="button" onclick="fetching(7)" value="7" id="7" ></td>
+	<td> <input class="stylingbutton" type="button" onclick="fetching(8)" value="8" id="8" ></td>
+	<td> <input class="stylingbutton" type="button" onclick="fetching(9)" value="9" id="9" ></td>
+	</tr>
+
+
+	
+
+	</table>
 </body>
+</html>
