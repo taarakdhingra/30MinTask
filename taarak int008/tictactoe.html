@@ -5,10 +5,15 @@
 	</title>
 	<link href="tic.css" rel="stylesheet">
 
-	
-	<script>
-		
 
+	  <script type="text/javascript" src="tictacbackend.js"></script>
+	<script
+		src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+		
+<script>
 	var playerturn=1;
 function fetching(id )
 
@@ -16,7 +21,8 @@ function fetching(id )
 	if (playerturn<=9) {
 	if (playerturn%2==0)
 		{playerturn++;
-	document.getElementById(id).value="X";}
+	document.getElementById(id).value="X";
+	}
 	else
 		{playerturn++;
 	document.getElementById(id).value="0"}
@@ -27,9 +33,14 @@ if(document.getElementById(1).value==document.getElementById(2).value && documen
 if (document.getElementById(1).value=="X") 
 	{
 	alert("HURRAH!! X WINS...");
+
+	xwins();
+	oloss();
 }
 else{
-alert("HURRAH!! O WINS")
+alert("HURRAH!! O WINS");
+owins();
+xloss();
 
 }
 	}
@@ -40,9 +51,15 @@ alert("HURRAH!! O WINS")
 if (document.getElementById(4).value=="X") 
 	{
 alert("HURRAH!! X WINS...");
+xwins();
+oloss();
+
+
 }
 else{
 alert("HURRAH!! O WINS...");
+owins();
+xloss();
 
 }
 	}
@@ -52,9 +69,13 @@ alert("HURRAH!! O WINS...");
 if (document.getElementById(5).value=="X") 
 	{
 	alert("HURRAH!! X WINS...");
+	xwins();
+	oloss();
 }
 else{
 	alert("HURRAH!! O WINS...");
+	owins();
+xloss();
 
 }
 	}
@@ -64,9 +85,13 @@ if(document.getElementById(7).value==document.getElementById(8).value && documen
 if (document.getElementById(9).value=="X") 
 	{
 alert("HURRAH!! X WINS...");
+	xwins();
+	oloss();
 }
 else{
 	alert("HURRAH!! O WINS...");
+	owins();
+xloss();
 }
 	}
 
@@ -75,9 +100,12 @@ if(document.getElementById(2).value==document.getElementById(5).value && documen
 if (document.getElementById(5).value=="X") 
 	{
 alert("HURRAH!! X WINS...");
-}
+xwins();
+	oloss();}
 else{
 	alert("HURRAH!! O WINS...");
+	owins();
+xloss();
 }
 }
 
@@ -87,9 +115,13 @@ if(document.getElementById(3).value==document.getElementById(6).value && documen
 if (document.getElementById(6).value=="X") 
 	{
 	alert("HURRAH!! X WINS...");
+	 xwins();
+	 oloss();
 }
 else{
 	alert("HURRAH!! O WINS...");
+	owins();
+xloss();
 }
 	}
 
@@ -98,8 +130,12 @@ else{
 if (document.getElementById(5).value=="X") 
 	{
 	alert("HURRAH!! X WINS...");
+	 xwins();
+	 oloss();
 }
 else{	alert("HURRAH!! O WINS...");
+owins();
+xloss();
 }
 	}
 
@@ -108,9 +144,13 @@ else{	alert("HURRAH!! O WINS...");
 if (document.getElementById(5).value=="X") 
 	{
 	alert("HURRAH!! X WINS...");
+	 xwins();
+	oloss();
 }
 else{
 	alert("HURRAH!! O WINS...");
+	owins();
+xloss();
 
 }
 	}}
@@ -154,5 +194,29 @@ else{
 	
 
 	</table>
+	<div class="player1heading">PLAYER 1</div>
+	<div class="player2heading">PLAYER 2</div>
+
+	<div>
+		<input class="player1details" type="text" id="player1details" placeholder="NAME P1">
+		<input class="player2details" type="text" id="player2details" placeholder="NAME P1">
+
+
+	</div>
+	<div><input class="datapost" type="button" name="SUBMIT" value="SUBMIT" onclick="postingdetails()">
+		<input  class="dataposttwo" type="button" name="SUBMIT" value="SUBMIT" onclick="postingdetailsplayer()">
+	</div>
+	<div>
+				<input class="player1points" type="number" id="player1points" placeholder="P1 POINTS">
+	
+				<input class="player2points" type="number" id="player2points" placeholder="P2 POINTS">
+	</div>
+
+<script>
+	var player1name=document.getElementById('player1details').value;
+	var player2name=document.getElementById('player2details').value;
+</script>
+
+
 </body>
 </html>
